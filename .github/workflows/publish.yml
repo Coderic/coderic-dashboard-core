@@ -20,7 +20,11 @@ jobs:
           registry-url: https://npm.pkg.github.com
           scope: "@coderic"
       - run: npm install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm test --if-present
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm run build
       - run: npm publish --access public
         env:
