@@ -1,0 +1,51 @@
+{
+  "name": "@coderic/dashboard-core",
+  "version": "0.1.0",
+  "description": "Dashboard utilities — API client, env factory, Auth0 claim helpers",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@coderic/acl": "^0.1.0"
+  },
+  "peerDependencies": {
+    "@auth0/auth0-spa-js": "^2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@auth0/auth0-spa-js": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@auth0/auth0-spa-js": "^2.23.0",
+    "typescript": "^6.0.3",
+    "vitest": "^3.2.4"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coderic/coderic-dashboard-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Coderic/coderic-dashboard-core/issues"
+  },
+  "homepage": "https://github.com/Coderic/coderic-dashboard-core#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  }
+}
